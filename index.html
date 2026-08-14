@@ -916,23 +916,6 @@
     footer li{margin-bottom:8px;}
     .foot-bottom{flex-direction:column; text-align:center; gap:6px;}
   }
-
-  /* -------- map: swap overlaid pins for a clean list below the map on phones -------- */
-  .map-mobile-list{display:none;}
-  @media (max-width: 680px){
-    .pin, .pin-dot{display:none;}
-    .map-mobile-list{
-      display:flex; flex-direction:column; margin-top:22px; position:relative; z-index:3;
-      border-top:1px solid var(--line);
-    }
-    .map-mobile-list .mm-row{
-      display:flex; justify-content:space-between; align-items:center; gap:14px;
-      padding:13px 2px; border-bottom:1px solid var(--line);
-    }
-    .map-mobile-list .mm-city{font-size:13.5px; font-weight:700; color:var(--white); letter-spacing:0.2px;}
-    .map-mobile-list .mm-label{font-size:8.5px; letter-spacing:1.3px; text-transform:uppercase; color:var(--muted); margin-top:3px;}
-    .map-mobile-list .mm-yield{font-family:var(--serif); font-size:16px; font-weight:700; color:var(--gold-2); flex:none;}
-  }
 </style>
 </head>
 <body>
@@ -1257,29 +1240,6 @@
           <div class="pin-top"><span class="p-city" data-i18n="city_dubai">Dubái</span><span class="p-yield">6.3%</span></div>
           <div class="p-stat" data-i18n="rental_yield">Rental Yield</div>
           <div class="pin-bar"><div class="pin-bar-fill"></div></div>
-        </div>
-      </div>
-
-      <div class="map-mobile-list">
-        <div class="mm-row">
-          <div><div class="mm-city">Miami</div><div class="mm-label" data-i18n="rental_yield">Rental Yield</div></div>
-          <div class="mm-yield">6.8%</div>
-        </div>
-        <div class="mm-row">
-          <div><div class="mm-city" data-i18n="city_rd">Rep. Dominicana</div><div class="mm-label" data-i18n="rental_yield">Rental Yield</div></div>
-          <div class="mm-yield">8.5%</div>
-        </div>
-        <div class="mm-row">
-          <div><div class="mm-city">Paraguay</div><div class="mm-label" data-i18n="rental_yield">Rental Yield</div></div>
-          <div class="mm-yield">7.4%</div>
-        </div>
-        <div class="mm-row">
-          <div><div class="mm-city">Chile</div><div class="mm-label" data-i18n="rental_yield">Rental Yield</div></div>
-          <div class="mm-yield">5.0%</div>
-        </div>
-        <div class="mm-row">
-          <div><div class="mm-city" data-i18n="city_dubai">Dubái</div><div class="mm-label" data-i18n="rental_yield">Rental Yield</div></div>
-          <div class="mm-yield">6.3%</div>
         </div>
       </div>
     </div>
