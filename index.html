@@ -353,7 +353,7 @@
   .invertir{background:var(--bg);}
   .map-panel{
     background:linear-gradient(160deg, var(--panel), var(--panel-2));
-    border:1px solid var(--line); border-radius:10px; padding:18px;
+    border:1px solid var(--line); border-radius:10px; padding:0;
     position:relative; overflow:hidden;
     box-shadow:0 40px 90px rgba(0,0,0,0.4);
   }
@@ -369,7 +369,7 @@
   .map-corner.bl{bottom:16px; left:16px; border-right:none; border-top:none;}
   .map-corner.br{bottom:16px; right:16px; border-left:none; border-top:none;}
   .map-svg-wrap{
-    position:relative; max-width:1000px; margin:0 auto; overflow:visible;
+    position:relative; overflow:visible;
   }
   .map-visual{
     position:absolute; inset:0; border-radius:10px; overflow:hidden;
@@ -894,7 +894,7 @@
     .hero .sub{font-size:13px;}
     .cta-row{flex-direction:column; width:100%; gap:12px;}
     .btn{width:100%; min-width:0;}
-    .map-panel{padding:12px;}
+    .map-panel{padding:0;}
     .map-corner{width:16px; height:16px;}
     .map-svg-wrap{}
     .pin{
