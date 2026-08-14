@@ -901,12 +901,20 @@
     .map-panel{padding:24px 16px;}
     .map-corner{width:16px; height:16px;}
     .map-svg-wrap{}
-    .pin{min-width:118px; max-width:48%; padding:10px 13px 10px; font-size:10px;}
-    .pin-dubai{left:auto; right:2%;}
-    .pin-rd{top:10%; left:30%; max-width:44%;}
-    .pin .p-city{font-size:11.5px;}
-    .pin .p-yield{font-size:13px;}
-    .pin .p-stat{font-size:8px;}
+    .pin{
+      min-width:0; width:auto; max-width:44%; padding:6px 9px 6px; border-radius:8px;
+    }
+    .pin::after{width:8px; height:8px;}
+    .pin-top{gap:6px; margin-bottom:2px; padding-bottom:2px;}
+    .pin .p-city{font-size:8.5px; letter-spacing:0.1px;}
+    .pin .p-yield{font-size:10.5px;}
+    .pin .p-stat{font-size:5.6px; letter-spacing:0.7px; margin-bottom:3px;}
+    .pin-bar{height:2px;}
+    .pin-mia{top:24%; left:0%;}
+    .pin-rd{top:0%; left:30%; max-width:44%;}
+    .pin-asu{top:50%; left:30%;}
+    .pin-stgo{top:76%; left:0%;}
+    .pin-dubai{top:76%; left:auto; right:0%;}
     .plus-row{grid-template-columns:16px 78px 1fr 40px; gap:6px; font-size:10.5px;}
     .plus-val{width:40px;}
     .video-panel{aspect-ratio:16/11;}
