@@ -373,11 +373,7 @@
   }
   .map-visual{
     position:absolute; inset:0; border-radius:10px; overflow:hidden;
-    box-shadow:
-      inset 0 0 0 1px rgba(201,162,75,0.4),
-      inset 0 0 0 8px rgba(6,10,16,0.45),
-      inset 0 0 0 9px rgba(201,162,75,0.16),
-      0 24px 60px rgba(0,0,0,0.55);
+    box-shadow: inset 0 0 0 1px rgba(201,162,75,0.35);
   }
   .map-gold-tint{
     position:absolute; inset:0; z-index:2; pointer-events:none; mix-blend-mode:overlay; opacity:0.55;
@@ -390,7 +386,7 @@
       repeating-linear-gradient(90deg, rgba(230,200,120,0.6) 0 1px, transparent 1px 62px);
   }
   .map-bg{
-    position:absolute; inset:-2%; width:104%; height:104%; object-fit:cover;
+    position:absolute; top:-6%; bottom:-6%; left:-2%; right:-22%; object-fit:cover;
     filter:saturate(1.05) brightness(0.92);
     animation:mapBreathe 16s ease-in-out infinite, mapKenBurns 26s ease-in-out infinite alternate;
     transform-origin:50% 55%;
@@ -405,13 +401,11 @@
   }
   .map-bg-tint{
     position:absolute; inset:0;
-    background:
-      radial-gradient(80% 60% at 30% 40%, rgba(15,28,48,0) 0%, rgba(15,28,48,0.35) 100%),
-      linear-gradient(180deg, rgba(15,28,48,0.25), rgba(15,28,48,0.55));
+    background: linear-gradient(180deg, rgba(15,28,48,0.12), rgba(15,28,48,0.32));
   }
   .map-vignette{
     position:absolute; inset:0; z-index:3; pointer-events:none;
-    background:radial-gradient(120% 90% at 50% 45%, transparent 55%, rgba(6,10,16,0.55) 100%);
+    background:radial-gradient(140% 110% at 50% 45%, transparent 75%, rgba(6,10,16,0.3) 100%);
   }
   .map-stars{position:absolute; inset:0; z-index:2; pointer-events:none; overflow:hidden;}
   .map-stars span{
