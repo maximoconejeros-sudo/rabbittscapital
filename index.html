@@ -160,14 +160,11 @@
     font-weight:300;
   }
   .dest-highlight{
-    display:block; margin-top:12px;
-    font-family:var(--serif); font-weight:700; font-size:clamp(20px,2.6vw,29px);
-    letter-spacing:0.4px; text-transform:uppercase; color:var(--gold-2);
     animation: destGlow 2.6s ease-in-out infinite;
   }
   @keyframes destGlow{
-    0%, 100%{ text-shadow:0 0 10px rgba(230,200,120,0.3); opacity:0.92; }
-    50%{ text-shadow:0 0 26px rgba(230,200,120,0.8); opacity:1; }
+    0%, 100%{ opacity:0.55; }
+    50%{ opacity:1; }
   }
 
   /* ---------- GLOBAL SCROLL-REVEAL (site-wide polish) ---------- */
@@ -968,8 +965,8 @@
 <section class="destinos" id="destinos">
   <div class="wrap">
     <div class="eyebrow" style="margin-top:80px;" data-i18n="destinos_eyebrow">PORTAFOLIO INTERNACIONAL</div>
+    <p class="section-sub" data-i18n-html="destinos_sub" style="margin-bottom:12px;">Cinco mercados, una sola estrategia: <span class="dest-highlight">Dolarización, plusvalía y retorno</span></p>
     <h2 class="section-title" data-i18n="destinos_title">Nuestros Destinos Global</h2>
-    <p class="section-sub" data-i18n-html="destinos_sub">Cinco mercados, una sola estrategia:<span class="dest-highlight">Dolarización, plusvalía y retorno</span></p>
 
     <div class="country-tabs" id="countryTabs">
       <div class="country-tab active" data-country="cl"><span class="flag">🇨🇱</span><span data-i18n="tab_cl">CHILE</span></div>
@@ -1470,7 +1467,7 @@
     hero_sub:{es:'Asesoría patrimonial y tributaria de élite para inversionistas exigentes.', en:'Elite wealth and tax advisory for discerning investors.'},
     destinos_eyebrow:{es:'PORTAFOLIO INTERNACIONAL', en:'INTERNATIONAL PORTFOLIO'},
     destinos_title:{es:'Nuestros Destinos Global', en:'Our Global Destinations'},
-    destinos_sub:{es:'Cinco mercados, una sola estrategia:<span class="dest-highlight">Dolarización, plusvalía y retorno</span>', en:'Five markets, one strategy:<span class="dest-highlight">Dollarization, appreciation and returns</span>'},
+    destinos_sub:{es:'Cinco mercados, una sola estrategia: <span class="dest-highlight">Dolarización, plusvalía y retorno</span>', en:'Five markets, one strategy: <span class="dest-highlight">Dollarization, appreciation and returns</span>'},
     tab_cl:{es:'CHILE', en:'CHILE'},
     tab_us:{es:'ESTADOS UNIDOS', en:'UNITED STATES'},
     tab_py:{es:'PARAGUAY', en:'PARAGUAY'},
