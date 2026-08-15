@@ -160,15 +160,13 @@
     font-weight:300;
   }
   .dest-highlight{
-    display:block; margin-top:8px; font-size:17px;
-    background:linear-gradient(90deg, var(--muted) 0%, var(--gold-2) 50%, var(--muted) 100%);
-    background-size:220% auto; background-position:200% center;
-    -webkit-background-clip:text; background-clip:text; color:transparent;
-    animation: destGlow 3.2s ease-in-out infinite;
+    display:block; margin-top:9px; font-size:21px; letter-spacing:0.3px;
+    color:var(--gold-2); font-weight:600;
+    animation: destGlow 2.4s ease-in-out infinite;
   }
   @keyframes destGlow{
-    0%{ background-position:200% center; }
-    100%{ background-position:-120% center; }
+    0%, 100%{ text-shadow:0 0 6px rgba(230,200,120,0.25); opacity:0.82; }
+    50%{ text-shadow:0 0 24px rgba(230,200,120,0.8), 0 0 42px rgba(230,200,120,0.35); opacity:1; }
   }
 
   /* ---------- GLOBAL SCROLL-REVEAL (site-wide polish) ---------- */
@@ -969,7 +967,7 @@
 <section class="destinos" id="destinos">
   <div class="wrap">
     <div class="eyebrow" style="margin-top:80px;" data-i18n="destinos_eyebrow">PORTAFOLIO INTERNACIONAL</div>
-    <p class="section-sub" data-i18n-html="destinos_sub" style="margin-bottom:12px;">Cinco mercados, una sola estrategia: <span class="dest-highlight">Dolarización, plusvalía y retorno</span></p>
+    <p class="section-sub" data-i18n-html="destinos_sub" style="margin-bottom:12px;">Cinco mercados, una sola estrategia <span class="dest-highlight">Dolarización, plusvalía y retorno</span></p>
     <h2 class="section-title" data-i18n="destinos_title">Nuestros Destinos Global</h2>
 
     <div class="country-tabs" id="countryTabs">
@@ -1470,7 +1468,7 @@
     hero_sub:{es:'Asesoría patrimonial y tributaria de élite para inversionistas exigentes.', en:'Elite wealth and tax advisory for discerning investors.'},
     destinos_eyebrow:{es:'PORTAFOLIO INTERNACIONAL', en:'INTERNATIONAL PORTFOLIO'},
     destinos_title:{es:'Nuestros Destinos Global', en:'Our Global Destinations'},
-    destinos_sub:{es:'Cinco mercados, una sola estrategia: <span class="dest-highlight">Dolarización, plusvalía y retorno</span>', en:'Five markets, one strategy: <span class="dest-highlight">Dollarization, appreciation and returns</span>'},
+    destinos_sub:{es:'Cinco mercados, una sola estrategia <span class="dest-highlight">Dolarización, plusvalía y retorno</span>', en:'Five markets, one strategy <span class="dest-highlight">Dollarization, appreciation and returns</span>'},
     tab_cl:{es:'CHILE', en:'CHILE'},
     tab_us:{es:'ESTADOS UNIDOS', en:'UNITED STATES'},
     tab_py:{es:'PARAGUAY', en:'PARAGUAY'},
