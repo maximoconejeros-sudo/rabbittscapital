@@ -162,11 +162,11 @@
   .dest-highlight{
     display:block; margin-top:3px; font-size:21px; letter-spacing:0.3px;
     color:var(--white); font-weight:600;
-    animation: destGlow 2.4s ease-in-out infinite;
+    animation: destGlow 3.2s ease-in-out infinite;
   }
   @keyframes destGlow{
-    0%, 100%{ text-shadow:0 0 6px rgba(245,243,238,0.2); opacity:0.82; }
-    50%{ text-shadow:0 0 22px rgba(245,243,238,0.7), 0 0 38px rgba(245,243,238,0.3); opacity:1; }
+    0%, 100%{ transform:translateY(0); opacity:0.82; }
+    50%{ transform:translateY(-3px); opacity:1; }
   }
 
   /* ---------- GLOBAL SCROLL-REVEAL (site-wide polish) ---------- */
@@ -446,16 +446,18 @@
   }
 
   .pin{
-    position:absolute; background:linear-gradient(160deg, rgba(26,32,45,0.97), rgba(9,12,19,0.97));
-    border:1px solid rgba(201,162,75,0.32); border-radius:10px;
-    padding:15px 19px 14px; font-size:11px; min-width:148px; max-width:46%;
-    box-shadow:0 16px 36px rgba(0,0,0,0.5), 0 0 0 1px rgba(201,162,75,0.05);
-    backdrop-filter:blur(5px); z-index:5; opacity:0; animation:pinIn .7s cubic-bezier(.2,.7,.3,1) forwards;
-    overflow:hidden; transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease;
+    position:absolute; background:linear-gradient(160deg, rgba(30,38,54,0.5), rgba(10,14,22,0.5));
+    border:1px solid rgba(201,162,75,0.45); border-radius:999px;
+    padding:16px 24px 15px; font-size:11px; min-width:148px; max-width:46%;
+    box-shadow:0 16px 36px rgba(0,0,0,0.4);
+    backdrop-filter:blur(10px); -webkit-backdrop-filter:blur(10px);
+    z-index:5; opacity:0; animation:pinIn .7s cubic-bezier(.2,.7,.3,1) forwards;
+    overflow:hidden; transition:transform .35s ease, box-shadow .35s ease, border-color .35s ease, background .35s ease;
   }
   .pin:hover{
-    transform:translateY(-3px); border-color:rgba(201,162,75,0.6);
-    box-shadow:0 22px 46px rgba(0,0,0,0.6), 0 0 24px rgba(201,162,75,0.18);
+    transform:translateY(-3px); border-color:rgba(201,162,75,0.75);
+    background:linear-gradient(160deg, rgba(30,38,54,0.68), rgba(10,14,22,0.68));
+    box-shadow:0 22px 46px rgba(0,0,0,0.5), 0 0 24px rgba(201,162,75,0.18);
   }
   .pin::before{
     content:''; position:absolute; top:0; left:-30%; width:60%; height:2px;
@@ -467,12 +469,7 @@
     0%, 100%{ left:-30%; }
     50%{ left:70%; }
   }
-  .pin::after{
-    content:''; position:absolute; top:0; left:0; width:12px; height:12px;
-    border-top:1.5px solid var(--gold-2); border-left:1.5px solid var(--gold-2);
-    border-radius:10px 0 0 0; opacity:0.85; pointer-events:none;
-  }
-  .pin-top{display:flex; align-items:baseline; justify-content:space-between; gap:14px; margin-bottom:7px; padding-bottom:7px; border-bottom:1px solid rgba(201,162,75,0.16);}
+  .pin-top{display:flex; align-items:baseline; justify-content:space-between; gap:14px; margin-bottom:7px; padding-bottom:7px; border-bottom:1px solid rgba(201,162,75,0.2);}
   .pin .p-city{font-family:var(--serif); font-weight:700; color:var(--white); font-size:12.5px; letter-spacing:0.3px;}
   .pin .p-yield{font-family:var(--serif); font-size:15px; color:var(--gold-2); font-weight:600; line-height:1;}
   .pin .p-stat{color:var(--muted); font-size:8.5px; letter-spacing:1.4px; text-transform:uppercase; margin-bottom:9px;}
@@ -892,6 +889,7 @@
   @media (max-width: 560px){
     .wrap{padding:0 18px;}
     .nav-inner{padding:16px 18px;}
+    .dest-highlight{font-size:16px;}
     .benefits-grid{grid-template-columns:1fr; gap:14px;}
     .prop-grid{grid-template-columns:1fr; gap:16px;}
     .country-tabs{gap:8px; flex-wrap:nowrap; overflow-x:auto; justify-content:flex-start; padding-bottom:6px; -webkit-overflow-scrolling:touch;}
@@ -915,9 +913,8 @@
     .map-corner{width:16px; height:16px;}
     .map-svg-wrap{}
     .pin{
-      min-width:0; width:auto; max-width:44%; padding:6px 9px 6px; border-radius:8px;
+      min-width:0; width:auto; max-width:44%; padding:9px 14px 8px; border-radius:999px;
     }
-    .pin::after{width:8px; height:8px;}
     .pin-top{gap:6px; margin-bottom:2px; padding-bottom:2px;}
     .pin .p-city{font-size:8.5px; letter-spacing:0.1px;}
     .pin .p-yield{font-size:10.5px;}
