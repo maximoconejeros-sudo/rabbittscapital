@@ -159,6 +159,16 @@
     text-align:center; color:var(--muted); font-size:14.5px; max-width:560px; margin:0 auto 56px;
     font-weight:300;
   }
+  .dest-highlight{
+    display:block; margin-top:12px;
+    font-family:var(--serif); font-weight:700; font-size:clamp(20px,2.6vw,29px);
+    letter-spacing:0.4px; text-transform:uppercase; color:var(--gold-2);
+    animation: destGlow 2.6s ease-in-out infinite;
+  }
+  @keyframes destGlow{
+    0%, 100%{ text-shadow:0 0 10px rgba(230,200,120,0.3); opacity:0.92; }
+    50%{ text-shadow:0 0 26px rgba(230,200,120,0.8); opacity:1; }
+  }
 
   /* ---------- GLOBAL SCROLL-REVEAL (site-wide polish) ---------- */
   .auto-reveal{
@@ -949,7 +959,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-eyebrow">Rabbitts Capital</div>
-    <h1 data-i18n="hero_title">Construimos, diversificamos y blindamos tu patrimonio en Chile y el extranjero.</h1>
+    <h1 data-i18n-html="hero_title">Master Broker Internacional<br>Inversiones Inmobiliarias Sin Fronteras</h1>
     <p class="sub" data-i18n="hero_sub">Asesoría patrimonial y tributaria de élite para inversionistas exigentes.</p>
   </div>
 </section>
@@ -959,7 +969,7 @@
   <div class="wrap">
     <div class="eyebrow" style="margin-top:80px;" data-i18n="destinos_eyebrow">PORTAFOLIO INTERNACIONAL</div>
     <h2 class="section-title" data-i18n="destinos_title">Nuestros Destinos Global</h2>
-    <p class="section-sub" data-i18n="destinos_sub">Cinco mercados, una sola estrategia: dolarización, plusvalía y retorno local — todo bajo un mismo paraguas patrimonial.</p>
+    <p class="section-sub" data-i18n-html="destinos_sub">Cinco mercados, una sola estrategia:<span class="dest-highlight">Dolarización, plusvalía y retorno</span></p>
 
     <div class="country-tabs" id="countryTabs">
       <div class="country-tab active" data-country="cl"><span class="flag">🇨🇱</span><span data-i18n="tab_cl">CHILE</span></div>
@@ -1456,11 +1466,11 @@
     nav_inicio:{es:'INICIO', en:'HOME'},
     nav_invertir:{es:'INVERTIR', en:'INVEST'},
     nav_asociate:{es:'ASÓCIATE', en:'PARTNER'},
-    hero_title:{es:'Construimos, diversificamos y blindamos tu patrimonio en Chile y el extranjero.', en:'We build, diversify and safeguard your wealth in Chile and abroad.'},
+    hero_title:{es:'Master Broker Internacional<br>Inversiones Inmobiliarias Sin Fronteras', en:'International Master Broker<br>Real Estate Investments Without Borders'},
     hero_sub:{es:'Asesoría patrimonial y tributaria de élite para inversionistas exigentes.', en:'Elite wealth and tax advisory for discerning investors.'},
     destinos_eyebrow:{es:'PORTAFOLIO INTERNACIONAL', en:'INTERNATIONAL PORTFOLIO'},
     destinos_title:{es:'Nuestros Destinos Global', en:'Our Global Destinations'},
-    destinos_sub:{es:'Cinco mercados, una sola estrategia: dolarización, plusvalía y retorno local — todo bajo un mismo paraguas patrimonial.', en:'Five markets, one strategy: dollarization, appreciation and local returns — all under one wealth umbrella.'},
+    destinos_sub:{es:'Cinco mercados, una sola estrategia:<span class="dest-highlight">Dolarización, plusvalía y retorno</span>', en:'Five markets, one strategy:<span class="dest-highlight">Dollarization, appreciation and returns</span>'},
     tab_cl:{es:'CHILE', en:'CHILE'},
     tab_us:{es:'ESTADOS UNIDOS', en:'UNITED STATES'},
     tab_py:{es:'PARAGUAY', en:'PARAGUAY'},
