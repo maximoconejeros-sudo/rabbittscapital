@@ -429,12 +429,16 @@
   }
   .map-lines{position:absolute; inset:0; width:100%; height:100%; z-index:2;}
   .map-lines .net-line{
-    fill:none; stroke:var(--gold-2); stroke-width:1; stroke-linecap:round;
-    opacity:0.28; animation:lineShimmer 5s ease-in-out infinite;
+    fill:none; stroke:var(--gold-2); stroke-width:1.1; stroke-linecap:round;
+    stroke-dasharray:3 6; opacity:0.32;
+    animation:lineShimmer 5s ease-in-out infinite, lineFlow 1.6s linear infinite;
   }
   @keyframes lineShimmer{
-    0%, 100%{ opacity:0.2; }
-    50%{ opacity:0.4; }
+    0%, 100%{ opacity:0.22; }
+    50%{ opacity:0.45; }
+  }
+  @keyframes lineFlow{
+    to{ stroke-dashoffset:-18; }
   }
   .map-lines .comet{
     fill:#f4e2ab;
@@ -488,9 +492,19 @@
     box-shadow:
       0 0 0 5px rgba(8,15,26,0.55),
       0 0 10px 3px rgba(230,200,120,0.85);
-    opacity:0; animation:dotIn .5s ease forwards;
+    opacity:0; animation:dotIn .5s ease forwards, dotCorePulse 2.2s ease-in-out infinite;
   }
   @keyframes dotIn{ to{ opacity:1; } }
+  @keyframes dotCorePulse{
+    0%, 100%{
+      box-shadow: 0 0 0 5px rgba(8,15,26,0.55), 0 0 10px 3px rgba(230,200,120,0.75);
+      transform:scale(1);
+    }
+    50%{
+      box-shadow: 0 0 0 5px rgba(8,15,26,0.55), 0 0 20px 7px rgba(230,200,120,1);
+      transform:scale(1.18);
+    }
+  }
   .pin-dot::before, .pin-dot::after{
     content:''; position:absolute; inset:0; border-radius:50%; border:1.5px solid var(--gold-2);
     animation:pulseRing 2.8s ease-out infinite;
@@ -502,19 +516,19 @@
   }
 
 
-  .dot-mia{top:28.5%; left:23%; animation-delay:.4s;}
+  .dot-mia{top:23.7%; left:19%; animation-delay:.4s;}
   .pin-mia{top:32%; left:27.5%; animation-delay:.7s;}
 
-  .dot-rd{top:35%; left:30%; animation-delay:.55s;}
+  .dot-rd{top:32.2%; left:37%; animation-delay:.55s;}
   .pin-rd{top:14%; left:34%; animation-delay:.9s; min-width:140px;}
 
-  .dot-asu{top:71%; left:32%; animation-delay:.7s;}
+  .dot-asu{top:77.6%; left:31.9%; animation-delay:.7s;}
   .pin-asu{top:63%; left:38.5%; animation-delay:1.05s;}
 
-  .dot-stgo{top:80.5%; left:19%; animation-delay:1s;}
+  .dot-stgo{top:95%; left:18.6%; animation-delay:1s;}
   .pin-stgo{top:85%; left:22.5%; animation-delay:1.4s;}
 
-  .dot-dubai{top:39%; left:87%; animation-delay:1.3s;}
+  .dot-dubai{top:37.1%; left:98%; animation-delay:1.3s;}
   .pin-dubai{top:29%; left:69%; animation-delay:1.75s;}
 
   .dashboard-row{
@@ -1194,22 +1208,22 @@
         </div>
         <div class="map-vignette"></div>
         <svg class="map-lines" viewBox="0 0 1000 666" preserveAspectRatio="none" xmlns="http://www.w3.org/2000/svg">
-          <path class="net-line" d="M230 193 Q290 340 320 465"/>
-          <path class="net-line" d="M230 193 Q205 370 190 535"/>
-          <path class="net-line" d="M230 193 Q560 70 870 260"/>
-          <path class="net-line" d="M230 193 Q270 205 300 233"/>
+          <path class="net-line" d="M190 158 Q250 305 319 517"/>
+          <path class="net-line" d="M190 158 Q165 335 186 633"/>
+          <path class="net-line" d="M190 158 Q560 60 980 247"/>
+          <path class="net-line" d="M190 158 Q230 170 370 214"/>
 
           <circle r="3" class="comet">
-            <animateMotion dur="4.6s" begin="0.6s" repeatCount="indefinite" path="M230 193 Q290 340 320 465"/>
+            <animateMotion dur="4.6s" begin="0.6s" repeatCount="indefinite" path="M190 158 Q250 305 319 517"/>
           </circle>
           <circle r="3" class="comet">
-            <animateMotion dur="4.6s" begin="1.2s" repeatCount="indefinite" path="M230 193 Q205 370 190 535"/>
+            <animateMotion dur="4.6s" begin="1.2s" repeatCount="indefinite" path="M190 158 Q165 335 186 633"/>
           </circle>
           <circle r="3.4" class="comet">
-            <animateMotion dur="6.5s" begin="0.4s" repeatCount="indefinite" path="M230 193 Q560 70 870 260"/>
+            <animateMotion dur="6.5s" begin="0.4s" repeatCount="indefinite" path="M190 158 Q560 60 980 247"/>
           </circle>
           <circle r="2.6" class="comet">
-            <animateMotion dur="3.4s" begin="0.9s" repeatCount="indefinite" path="M230 193 Q270 205 300 233"/>
+            <animateMotion dur="3.4s" begin="0.9s" repeatCount="indefinite" path="M190 158 Q230 170 370 214"/>
           </circle>
         </svg>
         </div>
