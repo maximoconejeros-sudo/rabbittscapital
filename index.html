@@ -54,7 +54,6 @@
   nav.links a.active::after{
     content:''; position:absolute; left:0; right:0; bottom:0; height:1px; background:var(--gold);
   }
-  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer;}
   .nav-right{display:flex; align-items:center; gap:32px;}
   .lang-switch{display:flex; align-items:center; border:1px solid var(--line); border-radius:20px; padding:3px; gap:2px; flex:none;}
   .lang-btn{
@@ -64,7 +63,6 @@
   }
   .lang-btn.active{background:linear-gradient(180deg, var(--gold-2), var(--gold)); color:#161206;}
   .lang-btn:not(.active):hover{color:var(--gold-2);}
-  .burger span{width:24px; height:2px; background:var(--white);}
 
   /* ---------- HERO ---------- */
   .hero{
@@ -119,6 +117,8 @@
     animation:heroFadeUp 1s ease .35s forwards;
     text-shadow:0 4px 30px rgba(0,0,0,0.5);
   }
+  .hero h1 .hero-line{display:block;}
+  .hero h1 .hero-line + .hero-line{margin-top:0.35em;}
   .hero p.sub{
     font-size:17px; color:#dcdfe4; max-width:560px; margin:0 auto 40px; font-weight:300;
     opacity:0;
@@ -867,7 +867,6 @@
 
   @media (max-width: 900px){
     nav.links{display:none;}
-    .burger{display:flex;}
     .nav-right{gap:12px;}
     .lang-btn{padding:5px 9px; font-size:9.5px;}
     .destino-grid{grid-template-columns:1fr;}
@@ -957,7 +956,6 @@
       <button type="button" class="lang-btn active" data-lang="es">ES</button>
       <button type="button" class="lang-btn" data-lang="en">EN</button>
     </div>
-    <div class="burger"><span></span><span></span><span></span></div>
     </div>
   </div>
 </header>
@@ -972,7 +970,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-inner">
     <div class="hero-eyebrow">Rabbitts Capital</div>
-    <h1 data-i18n-html="hero_title">Master Broker Internacional<br>Inversiones Inmobiliarias Sin Fronteras</h1>
+    <h1 data-i18n-html="hero_title"><span class="hero-line">Master Broker Internacional</span><span class="hero-line">Inversiones Inmobiliarias Sin Fronteras</span></h1>
     <p class="sub" data-i18n="hero_sub">Asesoría patrimonial y tributaria de élite para inversionistas exigentes.</p>
   </div>
 </section>
@@ -1478,7 +1476,7 @@
     nav_inicio:{es:'INICIO', en:'HOME'},
     nav_invertir:{es:'INVERTIR', en:'INVEST'},
     nav_asociate:{es:'ASÓCIATE', en:'PARTNER'},
-    hero_title:{es:'Master Broker Internacional<br>Inversiones Inmobiliarias Sin Fronteras', en:'International Master Broker<br>Real Estate Investments Without Borders'},
+    hero_title:{es:'<span class="hero-line">Master Broker Internacional</span><span class="hero-line">Inversiones Inmobiliarias Sin Fronteras</span>', en:'<span class="hero-line">International Master Broker</span><span class="hero-line">Real Estate Investments Without Borders</span>'},
     hero_sub:{es:'Asesoría patrimonial y tributaria de élite para inversionistas exigentes.', en:'Elite wealth and tax advisory for discerning investors.'},
     destinos_eyebrow:{es:'PORTAFOLIO INTERNACIONAL', en:'INTERNATIONAL PORTFOLIO'},
     destinos_title:{es:'Nuestros Destinos', en:'Our Destinations'},
